@@ -33,7 +33,7 @@ export class CommonService{
 
   saveSignUpData(saveJobSeekerDetailsData: any) {
     alert("saveEmployerDetailsData"); 
-    const urlSave = 'http://localhost:8080/jobSeekerDetails';
+    const urlSave = 'http://localhost:8080//api/auth/signup';
     console.log(saveJobSeekerDetailsData)
     return this.http.post(urlSave, saveJobSeekerDetailsData);
   }
