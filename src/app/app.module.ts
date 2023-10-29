@@ -19,6 +19,7 @@ import { EmployerdashboardComponent } from './employer/employerdashboard/employe
 import { JobpostingComponent } from './employer/jobposting/jobposting.component';
 import { ChildComponent } from './child/child.component';
 import { EmployerdetailsComponent } from './employer/employerdetails/employerdetails.component';
+import { JobviewComponent } from './employer/jobview/jobview.component';
 
 const appRoutes: Routes = [
   {
@@ -56,6 +57,10 @@ const appRoutes: Routes = [
         component: JobpostingComponent,
       },
       {
+        path: 'jobview',
+        component: JobviewComponent,
+      },
+      {
         path: 'employerdashboard',
        component: EmployerdashboardComponent,
       },
@@ -88,7 +93,8 @@ const appRoutes: Routes = [
     EmployerdashboardComponent,
     JobpostingComponent,
     ChildComponent,
-    EmployerdetailsComponent
+    EmployerdetailsComponent,
+    JobviewComponent
   ],
   imports: [
     BrowserModule,
