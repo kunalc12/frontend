@@ -41,6 +41,20 @@ export class ExplorecandidatesComponent {
     },
   ];
 
+  jobList = [
+    {
+      jobid: '1',
+      jobtitle: 'Software Engineer'
+    },
+    {
+      jobid: '2',
+      jobtitle: 'Program Manager'
+    },
+    {
+      jobid: '3',
+      jobtitle: 'Human Resource'
+    },
+  ]
 
   currentCardIndex = 0; // Initialize with the first user
   currentCard = this.cardData[this.currentCardIndex]; // Initialize the current card

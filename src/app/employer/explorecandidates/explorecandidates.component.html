@@ -1,22 +1,19 @@
-<h1>Explore candidates!</h1>
 <div class="swiper">
   <div class="card" [ngClass]="{'swiped-left': isSwipedLeft, 'swiped-right': isSwipedRight}">
     <div class="card-content">
-      <h2 style="text-align: center;">{{ currentCard.candidatename }}</h2>
-      <p>email: {{ currentCard.email }}</p>
-      <p>skills: {{ currentCard.skills }}</p>
-      <p>interest: {{ currentCard.interest }}</p>
-      <p>project description: {{ currentCard.projectdescription }}</p>
+      <h2 style="text-align: center;">List of Jobs</h2>
 
-      
-    </div>
-    <div class="card-actions">
-      <button class="red-button" (click)="swipeLeft()">&#10006;</button> <!-- Red button with "X" icon -->
-      <button class="green-button" (click)="swipeRight()">&#10004;</button> <!-- Green button with checkmark icon -->
-      
+      <div class="candidate-cards">
+        <!-- Iterate over the candidate list and create a card for each candidate -->
+        <div class="candidate-card" *ngFor="let job of jobList">
+          <h3>
+          <a [routerLink]="['/job-details', job.jobid]">{{ job.jobid }}&nbsp;{{ job.jobtitle }}</a>
+        </h3>
+  
+        </div>
+       </div>
+      </div>
     </div>
   </div>
-</div>
 
 
-  

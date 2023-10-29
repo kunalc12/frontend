@@ -73,3 +73,13 @@ button:disabled {
   transform: translateX(100%) rotate(20deg);
   opacity: 0;
 }
+
+/* CSS for button animations */
+.clickable-button {
+  transition: transform 0.2s ease;
+}
+
+.clickable-button:hover {
+  transform: scale(1.1); /* Adjust the scale value for the desired button zoom effect */
+  cursor: pointer;
+}

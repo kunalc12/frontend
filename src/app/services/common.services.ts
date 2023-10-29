@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CommonService{
  
+  
   constructor(private http: HttpClient) {}
 
   saveJobPostingData(jobPostingData: any) {
