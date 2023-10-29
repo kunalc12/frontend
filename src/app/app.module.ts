@@ -24,7 +24,7 @@ import { JobviewComponent } from './employer/jobview/jobview.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'signup',
     pathMatch: 'full',
   },
   {

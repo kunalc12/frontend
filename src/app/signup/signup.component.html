@@ -1,30 +1,39 @@
-<h1>Sign Up here</h1>
-
-<div class="signup-container">
-    <h2>Sign Up</h2>
-    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label>Who are you?</label>
-        <label>
-          <input type="radio" formControlName="user_type" value="jobseeker"> Job Seeker
-        </label>
-        <label>
-          <input type="radio" formControlName="user_type" value="recruiter"> Recruiter
-        </label>
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <form  class="login" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+          <div class="login__field">
+            <label>Who are you? <br></label>
+            <label>
+              <input type="radio" formControlName="user_type" value="jobseeker"> Job Seeker
+            </label>
+            <label>
+              <input type="radio" formControlName="user_type" value="recruiter"> Recruiter
+            </label>
+          </div>          
+          <div class="login__field">
+            <i class="login__icon fas fa-user"></i>
+            <input type="text" id="email" formControlName="email"  class="login__input" placeholder="Email" required>
+          </div>
+          <div class="login__field">
+            <i class="login__icon fas fa-lock"></i>
+            <input type="password" class="login__input" id="password" placeholder="Password" formControlName="password" required>
+          </div>
+          <div class="login__field">
+            <i class="login__icon fas fa-lock"></i>
+            <input type="password"  class="login__input" id="confirmpassword" placeholder="Confirm Password" formControlName="confirmPassword" required>
+          </div>
+          <button class="button login__submit">
+            <span class="button__text" button type="submit" >Sign Up Now</span>
+            <i class="button__icon fas fa-chevron-right"></i>
+          </button>				
+        </form>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" formControlName="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" formControlName="password" required>
-      </div>
-      <div class="form-group">
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" formControlName="confirmPassword" required>
-      </div>
-      <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
-    </form>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>		
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+      </div>		
+    </div>
   </div>
-  
