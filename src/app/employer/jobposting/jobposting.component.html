@@ -1,0 +1,19 @@
+<h1>Post a Job</h1>
+<div class="signup-container">
+    <h2>Job Posting</h2>
+    <form [formGroup]="jobposting" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="jobtitle">Job Title</label>
+            <input type="text" id="jobtitle" formControlName="jobtitle" required>
+          </div>
+      <div class="form-group">
+        <label for="companyname">Company name</label>
+        <input type="text" id="companyname" formControlName="companyname" required>
+      </div>
+      <div class="form-group">
+        <label for="profile">Job Profile</label>
+        <input type="text" id="profile" formControlName="profile" required>
+      </div>
+      <button type="submit" [disabled]="!jobposting.valid">Post Job</button>
+    </form>
+</div>

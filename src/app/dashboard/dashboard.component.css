@@ -1,0 +1,75 @@
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Circular Button Styles */
+button {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes the button circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Red and Green Button Styles */
+.red-button {
+  background-color: #FF4136; /* Red Color */
+  color: #fff;
+}
+
+.green-button {
+  background-color: #2ECC40; /* Green Color */
+  color: #fff;
+}
+
+/* Disabled Button Styles */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.swiped-left {
+  transform: translateX(-100%) rotate(-20deg);
+  opacity: 0;
+}
+
+.swiped-right {
+  transform: translateX(100%) rotate(20deg);
+  opacity: 0;
+}
